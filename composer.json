@@ -1,39 +1,46 @@
 {
     "name": "illuminated/console-mutex",
     "description": "Mutex for Laravel console commands.",
-    "keywords": ["laravel", "console", "command", "mutex", "overlapping", "locker"],
+    "keywords": ["laravel", "console", "command", "mutex", "locker", "overlapping"],
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Dmitry Ivanov",
-            "email": "dmitry.g.ivanov@gmail.com"
-        }
-    ],
+    "support": {
+        "issues": "https://github.com/dmitry-ivanov/laravel-console-mutex/issues",
+        "source": "https://github.com/dmitry-ivanov/laravel-console-mutex"
+    },
+    "authors": [{
+        "name": "Dmitry Ivanov",
+        "email": "dmitry.g.ivanov@gmail.com"
+    }],
     "require": {
-        "php": "^7.2",
-        "illuminate/support": "^6.0",
-        "illuminate/console": "^6.0",
-        "arvenil/ninja-mutex": "^0.6",
-        "ext-json": "*"
+        "php": "^7.2.5",
+        "ext-json": "*",
+        "illuminate/support": "^7.0",
+        "illuminate/console": "^7.0",
+        "arvenil/ninja-mutex": "^0.6"
     },
     "require-dev": {
-        "phpunit/phpunit": "^7.0",
-        "mockery/mockery": "^1.0",
-        "orchestra/testbench": "3.7.*",
-        "illuminated/testing-tools": "5.8.*",
+        "phpunit/phpunit": "^8.4|^9.0",
+        "mockery/mockery": "^1.3.1",
+        "orchestra/testbench": "^5.0",
+        "illuminated/testing-tools": "^7.0",
         "predis/predis": "^1.1.1",
         "ext-pdo_mysql": "*",
         "ext-redis": "*"
     },
     "autoload": {
         "psr-4": {
-            "Illuminated\\Console\\Mutex\\": "src/"
+            "Illuminated\\Console\\": "src/"
         }
     },
     "autoload-dev": {
-        "classmap": [
-            "tests/ConsoleMutex/TestCase.php",
-            "tests/ConsoleMutex/fixture/app"
-        ]
-    }
+        "psr-4": {
+            "Illuminated\\Console\\Tests\\": "tests/",
+            "Illuminated\\Console\\Tests\\App\\": "tests/fixture/app/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
