@@ -29,7 +29,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Illuminated\\Console\\": "src/"
+            "Illuminated\\Console\\Mutex\\": "src/"
         }
     },
     "autoload-dev": {
